@@ -254,178 +254,146 @@ Persian: @IranSeed
     help_text_realm = [[
 Realm Commands:
 
-!creategroup [name]
-Create a group
+》info
+〉دریات اطلاعات گروه
 
-!createrealm [name]
-Create a realm
+》admins
+〉لیست ادمین های تک ستاره
 
-!setname [name]
-Set realm name
+》owner
+〉ایدی صاحب گروه
 
-!setabout [group_id] [text]
-Set a group's about text
+》modlist
+〉لیست ادمین های دو ستاره
 
-!setrules [grupo_id] [text]
-Set a group's rules
+》bots
+〉لیست ربات ها
 
-!lock [grupo_id] [setting]
-Lock a group's setting
+》who
+〉لیست کاربران
 
-!unlock [grupo_id] [setting]
-Unock a group's setting
+》block
+〉اخراج فرد با ریپلای
 
-!wholist
-Get a list of members in group/realm
+》ban
+〉بن کردن فرد
 
-!who
-Get a file of members in group/realm
+》unban
+〉حذف بن فرد
 
-!type
-Get group type
+》id
+〉دریافت ایدی گروه یا فردی
 
-!kill chat [grupo_id]
-Kick all memebers and delete group
+》id from
+〉دریافت ایدی کاربر با فوروارد
 
-!kill realm [realm_id]
-Kick all members and delete realm
+》kickme
+〉خروج از گروه
 
-!addadmin [id|username]
-Promote an admin by id OR username *Sudo only
+》setowner
+〉انتخاب صاحب گروه
 
-!removeadmin [id|username]
-Demote an admin by id OR username *Sudo only
+》setadmin
+〉ترفیع به مقام ادمین تک ستاره
+*ادمین های تک ستاره در لیست ادمین های گروه قرار میگیرند
 
-!list groups
-Get a list of all groups
+》demoteadmin
+〉حذف از مقام ادمین تک ستاره
 
-!list realms
-Get a list of all realms
+》promote [username|id]
+〉ترفیع به مقام ادمین دو ستاره
+*ادمین های دو ستاره داخل لیست ادمین ها قرار نمیگیرند ولی ربات به دستورات آن ها گوش میدهد
 
-!log
-Get a logfile of current group or realm
+》demote [username|id]
+〉حذف از مقام ادمین دو ستاره
 
-!broadcast [text]
-!broadcast Hello !
-Send text to all groups
-» Only sudo users can run this command
+》setname
+〉تنظیم اسم گروه
 
-!bc [group_id] [text]
-!bc 123456789 Hello !
-This command will send text to [group_id]
+》setphoto
+〉تنظیم عکس گروه
 
-» U can use both "/" and "!" 
+》setrules
+〉تنظیم قوانین گروه
 
-» Only mods, owner and admin can add bots in group
+》setabout
+〉تنظیم موضوع گروه
 
-» Only moderators and owner can use kick,ban,unban,newlink,link,setphoto,setname,lock,unlock,set rules,set about and settings commands
+》save [value] <text>
+〉ذخیره متن
 
-» Only owner can use res,setowner,promote,demote and log commands
+》get [value]
+〉دریافت متن های سیو شده
 
-]],
-    help_text = [[
-Commands list :
+》newlink
+〉ساخت لینک جدید
 
-!kick [username|id]
-You can also do it by reply
+》link
+〉دریافت لینک گروه
 
-!ban [ username|id]
-You can also do it by reply
+》rules
+〉دریافت قوانین گروه
 
-!unban [id]
-You can also do it by reply
+》lock
+[links|flood|spam|Arabic|member|rtl|sticker|contacts|strict]
+〉قفل کردن تنظیمات گروه
 
-!who
-Members list
+ 》unlock
+[links|flood|spam|Arabic|member|rtl|sticker|contacts|strict]
+〉باز کردن تنظیمات گروه
 
-!modlist
-Moderators list
+》mute
+[all|audio|gifs|photo|video|service]
+〉موت کردن
 
-!promote [username]
-Promote someone
+》unmute
+[all|audio|gifs|photo|video|service]
+〉بازکردن موارد موت شده
 
-!demote [username]
-Demote someone
+》setflood [value]
+〉تنظیم حساسیت به اسپم
 
-!kickme
-Will kick user
+》settings
+〉دریافت تنظیمات گروه
 
-!about
-Group description
+》muteslist
+دریافت لیست  فایل های موت شده
 
-!setphoto
-Set and locks group photo
+》muteuser [username]
+〉موت کردن فرد
+ *فرد موت شده هر پیامی ارسال کند پیام بلا فاصله پاک میشه
+*برای حذف موت فرد موت شده از همین دستور استفاده کنید
 
-!setname [name]
-Set group name
+》mutelist
+〉لیست افراد موت شده
 
-!rules
-Group rules
+》banlist
+〉لیست افراد بن شده
 
-!id
-Return group id or user id
+》clean
+[rules|about|modlist|mutelist]
+〉پاک کردن گذینه های بالا
 
-!help
-Get commands list
+》del
+〉حذف پیام در گروه با ریپلای
 
-!lock [member|name|bots|leave] 
-Locks [member|name|bots|leaveing] 
+》public [yes|no]
+〉تنظیم عمومی بودن گروه
 
-!unlock [member|name|bots|leave]
-Unlocks [member|name|bots|leaving]
+》res [username]
+〉دریافت نام و ایدی کاربر با نام کاربری
 
-!set rules [text]
-Set [text] as rules
-
-!set about [text]
-Set [text] as about
-
-!settings
-Returns group settings
-
-!newlink
-Create/revoke your group link
-
-!link
-Returns group link
-
-!owner
-Returns group owner id
-
-!setowner [id]
-Will set id as owner
-
-!setflood [value]
-Set [value] as flood sensitivity
-
-!stats
-Simple message statistics
-
-!save [value] [text]
-Save [text] as [value]
-
-!get [value]
-Returns text of [value]
-
-!clean [modlist|rules|about]
-Will clear [modlist|rules|about] and set it to nil
-
-!res [username]
-Returns user id
-
-!log
-Will return group logs
-
-!banlist
-Will return group ban list
-
-» U can use both "/" and "!" 
+**Do not need ! / # use
 
 » Only mods, owner and admin can add bots in group
 
 » Only moderators and owner can use kick,ban,unban,newlink,link,setphoto,setname,lock,unlock,set rules,set about and settings commands
 
 » Only owner can use res,setowner,promote,demote and log commands
+
+*sudo: @XOX_BOM_BOM_BENI_SBW_XOX
+
+
 
 ]]
   }
